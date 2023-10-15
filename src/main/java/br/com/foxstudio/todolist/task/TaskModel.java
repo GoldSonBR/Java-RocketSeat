@@ -33,6 +33,12 @@ private UUID idUser;
 @CreationTimestamp
 private LocalDateTime createdAt;
 
+public void setTitle(String title) throws Exception{
+    if(title.length() > 50){
+        throw new Exception("O Campo de Titulo dever conter no máximo 50 characteres");
+    }
 
+    this.title = title;
+}
 
 }
